@@ -56,18 +56,18 @@ Auch wenn der Code neu geschrieben wurde, so sind doch die Ziele hinter OpenLaye
 
 ### Kontakt zu den Autoren:
 
-Marc Jansen
-terrestris GmbH & Co. KG
-Pützchens Chaussee 56
-53227 Bonn
-+49 228 – 962 899 53
+Marc Jansen<br/>
+terrestris GmbH & Co. KG<br/>
+Pützchens Chaussee 56<br/>
+53227 Bonn<br/>
++49 228 – 962 899 53<br/>
 jansen@terrestris.de
 
-Andreas Hocevar
-Boundless
-222 Broadway, 19th Floor
-New York, NY 10038, USA
-+1 877 – 673-6436
+Andreas Hocevar<br/>
+Boundless<br/>
+222 Broadway, 19th Floor<br/>
+New York, NY 10038, USA<br/>
++1 877 – 673-6436<br/>
 ahocevar@boundlessgeo.com
 
 
