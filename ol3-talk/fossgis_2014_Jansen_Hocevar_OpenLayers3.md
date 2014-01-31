@@ -48,12 +48,72 @@ Durch eine vollständige Dokumentation der API und ergänzende Tutorials sowie e
 
 ### Verwendungsbeispiele
 
-* Beispiel: super simple (API!)
-* Beispiel: igc (50.000 vertizes)
+Was kann ol3 nun schon zum jetzigen Zeitpunkt? Im Folgenden werden wir drei aktuelle offizielle Beispiel kurzvorstellen und auch auf zwei Realweltanwendungen, die ol3 verwenden, verweisen.
+
+Das Beispiel "Simple example" (http://ol3js.org/en/master/examples/simple.html) zeigt, wie die Hauptkomponententen `ol.Map`, `ol.layer.Layer` (hier ein `Tile`-Layer) und `ol.View2D` zu verwenden sind:
+
+```javascript
+var map = new ol.Map({
+  layers: [
+    new ol.layer.Tile({
+      source: new ol.source.OSM()
+    })
+  ],
+  renderers: ol.RendererHints.createFromQueryData(),
+  target: 'map',
+  view: new ol.View2D({
+    center: [0, 0],
+    zoom: 2
+  })
+});
+```
+
+Die `ol.Map` als Kernkomponente von ol3 benötigt i.d.R. wenigstens Ein Kartenthema, eine Viewdefinition (im Falle einer 2D-Karte üblicherweise mit Zentrum und Zoomlevel) sowie ein HTML-Element in welchem die Karte gerendert werden soll (`target: 'map'`, hier ist `map` die `id` eine `<div>`-Elements auf der Seite).
+
+Mit diesen 12 Zeilen Code wird auf der Webseite eine vollfunktionale Karte gezeichnet, die eine OpenStreetMap-Quelle verwendet (`ol.source.OSM`):
+
+SCREENSHOT
+
+Am nächsten Beispiel "IGC Example" (http://ol3js.org/en/master/examples/igc.html), werden wir sehen, dass ol3 auch eine Vielzahl von Vektordaten performant darstellen und mit jenen interagieren kann.
+
+Im Beispiel werden 5 Paragliderflüge im IGC-Format (vgl. http://www.ukiws.demon.co.uk/GFAC/documents/tech_spec_gnss.pdf) als Quelle (ol.source.IGC) für einen Vektorlayer verwendet, die insgesamt beinahe 50.000 unterschiedliche Koordinaten enthalten. Beim Überfahren der Karte mit der Maus
+werden Informationen zum dem Mauszeiger am nächsten befindlichen Flug angezeigt.
+Diese Interkation mit der Karte geschieht über einen `mousemove`-EventHandler auf einem ol3-Element (im Code unten nicht aufgeführt).
+
+```javascript
+// ...
+// Code vereinfacht aus online Beispiel
+//
+// Erzeugung der vectorSource:
+var vectorSource = new ol.source.IGC({
+  urls: [
+    'data/igc/Clement-Latour.igc',
+    'data/igc/Damien-de-Baenst.igc',
+    'data/igc/Sylvain-Dhonneur.igc',
+    'data/igc/Tom-Payne.igc',
+    'data/igc/Ulrich-Prinz.igc'
+  ]
+});
+// Erzeugung einer Funktion, die das Aussehen der
+// Features je Auflösung bestimmt (gekürzt):
+var styleFunction = function(feature, resolution) {
+  // ...
+  return styleArray;
+};
+// ...
+// Verwendung der source in ol.layer.Vector:
+var layer = new ol.layer.Vector({
+  source: vectorSource,
+  styleFunction: styleFunction
+});
+// ...
+```
+
+SCREENSHOT
+
+
 * Beispiel: drag drop image (formate & interaktiv)
-
 * OpenGeoSuite (pluggable + standards + Product ready)
-
 * swisstopo (realworld)
   * Code https://github.com/geoadmin/mf-geoadmin3
   * URL http://map.geo.admin.ch/
