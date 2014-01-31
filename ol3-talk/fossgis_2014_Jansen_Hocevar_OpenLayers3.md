@@ -72,7 +72,7 @@ Die `ol.Map` als Kernkomponente von ol3 benötigt i.d.R. wenigstens Ein Kartenth
 
 Mit diesen 12 Zeilen Code wird auf der Webseite eine vollfunktionale Karte gezeichnet, die eine OpenStreetMap-Quelle verwendet (`ol.source.OSM`):
 
-SCREENSHOT
+![Screenshot einer einfachen ol3-Karte](/simple-example.png "Eine einfache ol3-Karte")
 
 Am nächsten Beispiel "IGC Example" (http://ol3js.org/en/master/examples/igc.html), werden wir sehen, dass ol3 auch eine Vielzahl von Vektordaten performant darstellen und mit jenen interagieren kann.
 
