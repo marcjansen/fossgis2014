@@ -6,7 +6,7 @@ Bereits seit einiger Zeit wird daher von der Entwicklergemeinde an OpenLayers 3 
 
 ### Was ist neu bei OpenLayers3?
 
-OpenLayers3 (ol3) wurde von Grund auf neu entwickelt und daher ist de facto alles neu an der Bibliothek.
+OpenLayers3 (ol3, http://ol3js.org/) wurde von Grund auf neu entwickelt und daher ist de facto alles neu an der Bibliothek.
 
 Das neue ol3 basiert auf der Funktionalität der JavaScript-Bibliothek Google Closure (https://developers.google.com/closure/library/), die auch in zahlreichen Google Produkten (etwa Gmail oder Google Maps) verwendet wird. Closure wird in ol3 vor allem verwendet, um das Klassensystem bereitzustellen, wiederkehrende Aufgaben (wie etwa HTML-Elementerzeugung, Eventhandling und DOM-Manipulation) zu lösen und um von der stärkestmöglichen Kompression des Tools Closure Compiler (https://developers.google.com/closure/compiler/) zu profitieren. Insbesondere der letzte Punkt garantiert eine sehr kleine Dateigröße der zusammengefassten und komprimierten ol3-JavaScript-Datei. Die finale ol3-Bibliothek ist aber natürlich auch ohne Google Closure zu benutzen. Bereits in der Entwicklung wurde wert darauaf gelegt, dass ol3 unproblematisch auch mit anderen JavaScript-Frameworks oder Bibliotheken einzusetzen ist.
 
@@ -22,16 +22,15 @@ Bei der Dokumentation der öffentlichen Schnittstelle setzt ol3 auf das Programm
 
 Auch wenn der Code neu geschrieben wurde, so sind doch die Ziele hinter OpenLayers unverändert. Auch ol3 ist:
 
-* Vielseitig
-* Modern: html5 apis, webGl, css3
-* Performant: filesize, internal code
-* Erweiter- und anpassbar:
-* Einfach: Harmonische API
-* Standardkonform: OGC
-* Cross-Browser: IE 9+
-* Cross-Platform: mobile und desktop
-* Verlässlich: Getestet & stabil
-* Dokumentiert: Gut dokumentiert:
+* Vielseitig verwendbar
+* Modern implementiert
+* Performant programmiert
+* Erweiter- und anpassbar
+* Einfach zu verstehen
+* Standardkonform
+* Cross-Anything (Browser, Platform & Endgerät)
+* Vollständig dokumentiert
+* Verlässlich in der Verwendung
 
 Die Bibliothek ol3 erlaubt zahlreiche Verwendungsmöglichkeiten und stellt dem Entwickler die Werkzeuge bereit, um so unterschiedliche Aufgaben wie einen einfachen Kartenviewer für eine Homepage zu erzeugen aber auch eine komplette webbasierte GDI (Geodaten Infrastruktur) mit optionaler 3D Visualisiserung umzusetzen.
 
