@@ -109,7 +109,7 @@ var layer = new ol.layer.Vector({
 // ...
 ```
 
-SCREENSHOT
+![Screenshot des IGC-Beispiels](igc-example.png "Das IGC-Beispiel.")
 
 
 * Beispiel: drag drop image (formate & interaktiv)
