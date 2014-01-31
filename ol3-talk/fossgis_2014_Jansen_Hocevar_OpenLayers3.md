@@ -37,6 +37,9 @@ Auch wenn der Code neu geschrieben wurde, so sind doch die Ziele hinter OpenLaye
 * OpenGeoSuite (pluggable + standards + Product ready)
 
 * swisstopo (realworld)
+  * Code https://github.com/geoadmin/mf-geoadmin3
+  * URL http://map.geo.admin.ch/
+  * ol3, Angular JS + Bootstrap
 
 ### Technische Highlights
 
