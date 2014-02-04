@@ -145,6 +145,8 @@ dragAndDropInteraction.on('addfeatures', function(event) {
 
 Dieser Code reicht aus, um einen neuen Vektor-Layer auf die Karte zu bringen, wann immer eine Datei in einem der konfigurierten Formate in das Kartenfenster gezogen wird.
 
+![Screenshot des Drag-and-Drop Beispiels](drag-drop.png "Das Drag-and-Drop Beispiel.")
+
 * OpenGeoSuite (pluggable + standards + Product ready)
 * swisstopo (realworld)
   * Code https://github.com/geoadmin/mf-geoadmin3
