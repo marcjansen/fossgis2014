@@ -111,7 +111,40 @@ var layer = new ol.layer.Vector({
 ![Screenshot des IGC-Beispiels](igc-example.png "Das IGC-Beispiel.")
 
 
-* Beispiel: drag drop image (formate & interaktiv)
+Das Drag & Drop Beispiel (http://ol3js.org/en/master/examples/drag-and-drop.html) zeigt schließlich, wie man in modernen Browsern mittels Drag & Drop von Vektor-Dateien in verschiedenen Formaten (z.B. GPX, KML, GeoJSON) ein neues Kartenthema hinzufügen kann:
+
+```javascript
+var dragAndDropInteraction = new ol.interaction.DragAndDrop({
+  formatConstructors: [
+    ol.format.GPX,
+    ol.format.GeoJSON,
+    ol.format.IGC,
+    ol.format.KML,
+    ol.format.TopoJSON
+  ]
+});
+
+var map = new ol.Map({
+  interactions: ol.interaction.defaults().extend([dragAndDropInteraction]),
+  // ...
+}
+
+dragAndDropInteraction.on('addfeatures', function(event) {
+  var vectorSource = new ol.source.Vector({
+    features: event.features,
+    projection: event.projection
+  });
+  map.getLayers().push(new ol.layer.Vector({
+    source: vectorSource,
+    styleFunction: styleFunction
+  }));
+  var view2D = map.getView().getView2D();
+  view2D.fitExtent(vectorSource.getExtent(), map.getSize());
+});
+```
+
+Dieser Code reicht aus, um einen neuen Vektor-Layer auf die Karte zu bringen, wann immer eine Datei in einem der konfigurierten Formate in das Kartenfenster gezogen wird.
+
 * OpenGeoSuite (pluggable + standards + Product ready)
 * swisstopo (realworld)
   * Code https://github.com/geoadmin/mf-geoadmin3
