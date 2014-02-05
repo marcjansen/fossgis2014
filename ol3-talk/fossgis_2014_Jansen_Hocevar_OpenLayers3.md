@@ -147,13 +147,20 @@ Dieser Code reicht aus, um einen neuen Vektor-Layer auf die Karte zu bringen, wa
 
 ![Screenshot des Drag-and-Drop Beispiels](drag-drop.png "Das Drag-and-Drop Beispiel.")
 
-* OpenGeoSuite (pluggable + standards + Product ready)
+Auch abseits der offiziellen Beispiel kommt OpenLayers 3 bereits zum Einsatz:
+* OpenGeo Suite (pluggable + standards + product ready)
+  * Early Access Support http://boundlessgeo.com/2013/11/blog-opengeo-suite-4-0-released/
+  * Map-Engine für Mapmeter http://mapmeter.com/
 * swisstopo (realworld)
   * Code https://github.com/geoadmin/mf-geoadmin3
   * URL http://map.geo.admin.ch/
   * ol3, Angular JS + Bootstrap
 
 ### Technische Highlights
+
+OpenLayers 3 bringt von Grund auf eine 3D taugliche Architektur. Um dem Rechnung zu tragen, gibt es die View-Klasse. Derzeit ist nur View2D implementiert, aber es ist alles für dreidimensionale Darstellungen vorbereitet.
+
+Um sowohl Canvas 2D als auch WebGL für Vektor-Features verwenden zu können, gibt es eine Abstraktion auf der Ebene einfacher Grafikoperationen (Zeichnen von Punkten, Linien, Polygonen, Text). Für Anwendungsentwickler ist es möglich, direkt Zugriff auf den Output-Canvas zuzugreifen, und damit eigene Graifk-Manipulationen vorzunehmen. Intern gibt es ein Replay-API, welches einmal vorberechnete Grafiken mit minimalem Rechenaufwand jederzeit wieder auf den Ziel-Canvas zeichnen kann. Damit ist es möglich, zigtausende Vektor-Features nicht nur ohne merkbare Verzögerung zu rendern, sondern auch zu animieren.
 
 * Layer spy + layer swipe
   * Events und Canvas2D
