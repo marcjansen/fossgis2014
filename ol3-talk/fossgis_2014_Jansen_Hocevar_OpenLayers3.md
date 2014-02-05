@@ -174,7 +174,7 @@ Die Beispiele "Layer spy" (http://ol3js.org/en/master/examples/layer-spy.html) u
 
 Mit ol3 ist es einfacher geworden, mit anderen Bibliotheken zusammen eine moderne Webapplikation zu entwickeln. Hier sei beispielhaft auf das "d3 integration"-Beispiel (http://ol3js.org/en/master/examples/d3.html) verwiesen. D3 (http://d3js.org/) -- eine populäre JavaScript-Bibliothek für dynamische, interaktive und vornehmlich grafische Anwendungen -- dient hier als Quelle eines `ol.layer.Image` und kann damit wie jeder andere Layer verwendet werden.
 
-### Kontakt zu den Autoren:
+### Kontakt
 
 Marc Jansen<br/>
 terrestris GmbH & Co. KG<br/>
