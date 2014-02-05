@@ -87,10 +87,8 @@ Diese Interkation mit der Karte geschieht über einen `mousemove`-EventHandler a
 var vectorSource = new ol.source.IGC({
   urls: [
     'data/igc/Clement-Latour.igc',
-    'data/igc/Damien-de-Baenst.igc',
-    'data/igc/Sylvain-Dhonneur.igc',
-    'data/igc/Tom-Payne.igc',
-    'data/igc/Ulrich-Prinz.igc'
+    'data/igc/Damien-de-Baenst.igc'
+    // ...
   ]
 });
 // Erzeugung einer Funktion, die das Aussehen der
@@ -114,36 +112,42 @@ var layer = new ol.layer.Vector({
 Das Drag & Drop Beispiel (http://ol3js.org/en/master/examples/drag-and-drop.html) zeigt schließlich, wie man in modernen Browsern mittels Drag & Drop von Vektor-Dateien in verschiedenen Formaten (z.B. GPX, KML, GeoJSON) ein neues Kartenthema hinzufügen kann:
 
 ```javascript
-var dragAndDropInteraction = new ol.interaction.DragAndDrop({
+// Erzeugung der spezifischen Interaktion:
+var dragNDropInteraction = new ol.interaction.DragAndDrop({
   formatConstructors: [
     ol.format.GPX,
-    ol.format.GeoJSON,
-    ol.format.IGC,
-    ol.format.KML,
-    ol.format.TopoJSON
+    ol.format.GeoJSON
+    // ...
   ]
 });
 
+// Erweitern der Standardinteraktionen
+var interactions = ol.interaction.defaults();
+
+// Erzeugung der Karte mit den Interaktionen
 var map = new ol.Map({
-  interactions: ol.interaction.defaults().extend(
-    [
-      dragAndDropInteraction
-    ]
-  ),
+  interactions: interactions.extend([ dragNDropInteraction ]),
   // ...
 }
 
-dragAndDropInteraction.on('addfeatures', function(event) {
+// ...wenn Features via drag'n drop hinzugefügt werden...
+dragNDropInteraction.on('addfeatures', function(event) {
+  // neue Quelle erzeugen...
   var vectorSource = new ol.source.Vector({
     features: event.features,
     projection: event.projection
   });
+  // ...der Karte hinzufügen...
   map.getLayers().push(new ol.layer.Vector({
     source: vectorSource,
     styleFunction: styleFunction
   }));
   var view2D = map.getView().getView2D();
-  view2D.fitExtent(vectorSource.getExtent(), map.getSize());
+  // ...Rezentrieren des Views.
+  view2D.fitExtent(
+    vectorSource.getExtent(),
+    map.getSize()
+  );
 });
 ```
 
