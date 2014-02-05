@@ -125,7 +125,11 @@ var dragAndDropInteraction = new ol.interaction.DragAndDrop({
 });
 
 var map = new ol.Map({
-  interactions: ol.interaction.defaults().extend([dragAndDropInteraction]),
+  interactions: ol.interaction.defaults().extend(
+    [
+      dragAndDropInteraction
+    ]
+  ),
   // ...
 }
 
@@ -147,14 +151,14 @@ Dieser Code reicht aus, um einen neuen Vektor-Layer auf die Karte zu bringen, wa
 
 ![Screenshot des Drag-and-Drop Beispiels](drag-drop.png "Das Drag-and-Drop Beispiel.")
 
-Auch abseits der offiziellen Beispiel kommt OpenLayers 3 bereits zum Einsatz:
-* OpenGeo Suite (pluggable + standards + product ready)
-  * Early Access Support http://boundlessgeo.com/2013/11/blog-opengeo-suite-4-0-released/
-  * Map-Engine für Mapmeter http://mapmeter.com/
-* swisstopo (realworld)
-  * Code https://github.com/geoadmin/mf-geoadmin3
-  * URL http://map.geo.admin.ch/
-  * ol3, Angular JS + Bootstrap
+
+Auch abseits der offiziellen Beispiel kommt OpenLayers 3 bereits zum Realwelteinsatz:
+
+Im Rahmen der OpenGeo Suite wird für ol3 bereits so genannter Early Access Support gewährt (http://boundlessgeo.com/2013/11/blog-opengeo-suite-4-0-released/). Daneben ist ol3 die Kartenbibliothek der wahl im Produkt Mapmeter (http://mapmeter.com/)
+
+Erst kürzlich wurde die u.a. auf ol3 basierende neuste Inkarnation des Kartenportals des Bundesamt für Landestopografie der Schweiz (swisstopo, http://map.geo.admin.ch/) veröffentlicht. Der Code hinter der OpenSource Webanwendung ist frei verfügbar (https://github.com/geoadmin/mf-geoadmin3) und zeigt das effiziente Zusammenspiel von ol3 mit den Frameworks AngularJS (http://angularjs.org/) und Bootstrap (http://getbootstrap.com/).
+
+![Screenshot der swisstopo Anwendung](swisstopo.png "Die swisstopo-Anwendung.")
 
 ### Technische Highlights
 
@@ -162,19 +166,9 @@ OpenLayers 3 bringt von Grund auf eine 3D taugliche Architektur. Um dem Rechnung
 
 Um sowohl Canvas 2D als auch WebGL für Vektor-Features verwenden zu können, gibt es eine Abstraktion auf der Ebene einfacher Grafikoperationen (Zeichnen von Punkten, Linien, Polygonen, Text). Für Anwendungsentwickler ist es möglich, direkt Zugriff auf den Output-Canvas zuzugreifen, und damit eigene Graifk-Manipulationen vorzunehmen. Intern gibt es ein Replay-API, welches einmal vorberechnete Grafiken mit minimalem Rechenaufwand jederzeit wieder auf den Ziel-Canvas zeichnen kann. Damit ist es möglich, zigtausende Vektor-Features nicht nur ohne merkbare Verzögerung zu rendern, sondern auch zu animieren.
 
-* Layer spy + layer swipe
-  * Events und Canvas2D
-  * postcompose
-  * precompose
+Die Beispiele "Layer spy" (http://ol3js.org/en/master/examples/layer-spy.html) und "Layer swipe" (http://ol3js.org/en/master/examples/layer-swipe.html) zeigen anschaulisch, wie mittels `pre`- und `postcompose` Einfluss auf das letzlich gezeichnete Kartenbild genommen werden kann. Jeweils werden nur Teile verschiedener Layer kombiniert, um ein interaktives und kontextabhängiges Kartenerlebnis zu gestalten.
 
-* d3 example
-  * ol.layer.Image
-  * Zusammenspiel mit 3rd party
-
-* layergroup
-  * gemeinsame API
-  * Bildmanipulation WebGL
-
+Mit ol3 ist es einfacher geworden, mit anderen Bibliotheken zusammen eine moderne Webapplikation zu entwickeln. Hier sei auf das "d3 integration"-Beispiel (http://ol3js.org/en/master/examples/d3.html) verwiesen. D3 (http://d3js.org/) -- eine populäre JavaScript-Bibliothek für dynamische, interaktive und vornehmlich grafische Anwendungen -- dient hier als Quelle eines `ol.layer.Image` und kann damit wie jeder andere Layer verwendet werden.
 
 ### Kontakt zu den Autoren:
 
@@ -192,7 +186,3 @@ New York, NY 10038, USA<br/>
 +1 (917) 460-7194<br/>
 ahocevar@boundlessgeo.com
 
-
-### Literatur
-
-todo
