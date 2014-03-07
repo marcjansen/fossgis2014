@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>OpenLayers 3 &mdash; Einführung, Verwendungsbeispiele und technische Highlights</title>
+
+		<meta name="description" content="Präsentation von OpenLayers 3 auf der FOSSGIS 2014">
+		<meta name="author" content="Andreas Hocevar, Boundless">
+		<meta name="author" content="Marc Jansen, terrestris">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="./reveal.js-2.6.1/css/reveal.min.css">
+		<link rel="stylesheet" href="./reveal.js-2.6.1/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="./reveal.js-2.6.1/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="./reveal.js-2.6.1/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+		.reveal section img.plain {
+		    background: none;
+		    border-width: 0;
+		    box-shadow: none;
+		}
+		
+		.reveal section h2 {
+		    border-bottom: 1px inset #eee;
+		    margin-bottom: 0.5em;
+		}
+		.reveal section p.subtle {
+		    margin-top: 5em;
+		}
+		.reveal section p.subtle a {
+		    font-size: smaller;
+		}
+		
+		.reveal section div.split-info {
+		    margin: 5px;
+		    clear: both;
+		}
+		.reveal section div.part {
+		    margin: 5px;
+		    float: left;
+		    width: 48%;
+		}
+		
+		.reveal section a.twitter,
+		.reveal section a.github {
+		    padding-left: 1.2em;
+		    background-repeat: no-repeat;
+		    background-position: left bottom;
+		    /* background-size: contain; */
+		    background-size: 1.0em;
+		}
+		
+		.reveal section a.github {
+		    background-image: url("images/github-logo.png");
+		}
+		.reveal section a.twitter {
+		    background-image: url("images/twitter-logo.png");
+		}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section id="welcome">
+					<h1>OpenLayers 3</h1>
+					<hr />
+					<h3>Einführung, Verwendungsbeispiele<br /> und technische Highlights</h3>
+					<img src="images/logo.png" class="plain"/>
+					<p>
+						<small>Marc Jansen, terrestris</small><br />
+						<small>Andreas Hocevar, Boundless</small>
+					</p>
+				</section>
+				
+				<section id="toc">
+					<h2>Gliederung</h2>
+					<ul>
+					    <li>&Uuml;ber &hellip;</li>
+					    <li>OpenLayers</li>
+					    <li>ol3
+					        <ul>
+					            <li>Neues &amp; Altes</li>
+					            <li>Beispiele</li>
+					            <li>Highlights</li>
+					        </ul>
+					    </li>
+					    <li>Fazit &amp; Ausblick</li>
+					</ul>
+			    </section>
+			    
+			    
+			    <section>
+			        <h2>&Uuml;ber uns</h2>
+			        <h5>ol3-Kernentwickler</h5>
+			        <div class="split-info">
+			            <div class="part">
+			                <img src="images/mj.jpg" height="192"/>
+			            </div>
+			            <div class="part">
+			                <strong>Marc Jansen</strong><br />
+			                <small>terrestris GmbH &amp; Co. KG</small><br />
+			                <a class="email" href="mailto:jansen@terrestris.de">jansen@terrestris.de</a><br />
+			                <a class="github" href="https://github.com/marcjansen/">@marcjansen</a><br />
+			                <a class="twitter" href="https://twitter.com/selectoid/">@ahoce</a><br />
+			            </div>
+			        </div>
+			        <div class="split-info">
+			            <div class="part">
+			                <img src="images/ah.jpg" height="192" />
+			            </div>
+			            <div class="part">
+			                <strong>Andreas Hocevar</strong><br />
+			                <small>Boundless</small><br />
+			                <a class="email" href="ahocevar@boundlessgeo.com">ahocevar@boundlessgeo.com<br />
+			                <a class="github" href="https://github.com/ahocevar/">@ahocevar</a><br />
+			                <a class="twitter" href="https://twitter.com/ahoce/">@ahoce</a><br />
+			            </div>
+			        </div>
+			    </section>
+			    
+			    <!-- page template
+			    <section>
+			        <h2>title</h2>
+			        <ul>
+			            <li>bullet</li>
+			        </ul>
+			    </section>
+			    -->
+			    
+			    <section id="thanks-questions">
+			        <h3>Vielen Dank für die Aufmerksamkeit</h3>
+			        <hr />
+			        <h1>Fragen / Ankmerkungen?</h1>
+			        <hr />
+			        <p class="subtle">
+			            <a href="#/imprint">Impressum</a>
+			        </p>
+			    </section>
+				
+				<section id="imprint">
+					<h3>Impressum</h3>
+					<ul>
+					    <li>Autoren:
+					        <ul>
+					            <li>Marc Jansen, terrestris GmbH &amp; Co. KG, <a href="mailto:jansen@terrestris.de">jansen@terrestris.de</a></li>
+					            <li>Andreas Hocevar, Boundless, <a href="mailto:ahocevar@boundlessgeo.com">ahocevar@boundlessgeo.com</a></li>
+					        </ul>
+					    </li>
+					    <li>
+					        Lizenz: <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+					    </li>
+					    <li>
+					        <a href="https://github.com/marcjansen/fossgis2014/tree/master/ol3-talk/slides/index.html">Vortragsfolien</a>
+					    </li>
+					    <li>
+					        <a href="https://github.com/marcjansen/fossgis2014/blob/master/ol3-talk/paper/fossgis_2014_Jansen_Hocevar_OpenLayers3.pdf?raw=true">Langfassung</a>
+					    </li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="./reveal.js-2.6.1/lib/js/head.min.js"></script>
+		<script src="./reveal.js-2.6.1/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: 'default', // available themes are in /css/theme
+				transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal.js-2.6.1/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js-2.6.1/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js-2.6.1/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js-2.6.1/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js-2.6.1/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal.js-2.6.1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
