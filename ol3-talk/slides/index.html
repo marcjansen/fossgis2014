@@ -29,50 +29,8 @@
         <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
-        <style>
-        .reveal section img.plain {
-            background: none;
-            border-width: 0;
-            box-shadow: none;
-        }
         
-        .reveal section h2 {
-            border-bottom: 1px inset #eee;
-            margin-bottom: 0.5em;
-        }
-        .reveal section p.subtle {
-            margin-top: 5em;
-        }
-        .reveal section p.subtle a {
-            font-size: smaller;
-        }
-        
-        .reveal section div.split-info {
-            margin: 5px;
-            clear: both;
-        }
-        .reveal section div.part {
-            margin: 5px;
-            float: left;
-            width: 48%;
-        }
-        
-        .reveal section a.twitter,
-        .reveal section a.github {
-            padding-left: 1.2em;
-            background-repeat: no-repeat;
-            background-position: left bottom;
-            /* background-size: contain; */
-            background-size: 1.0em;
-        }
-        
-        .reveal section a.github {
-            background-image: url("images/github-logo.png");
-        }
-        .reveal section a.twitter {
-            background-image: url("images/twitter-logo.png");
-        }
-        </style>
+        <link rel="stylesheet" type="text/css" href="customized.css" />
     </head>
 
     <body>
@@ -85,7 +43,18 @@
                     <h1>OpenLayers 3</h1>
                     <hr />
                     <h3>Einführung, Verwendungsbeispiele<br /> und technische Highlights</h3>
-                    <img src="images/logo.png" class="plain"/>
+                    <img src="images/ol3-logo.png" width="300" class="plain"/>
+                    <p>
+                        <small>Marc Jansen, terrestris</small><br />
+                        <small>Andreas Hocevar, Boundless</small>
+                    </p>
+                </section>
+                
+                <section id="welcome">
+                    <h1 class="force-lowercase">ol3</h1>
+                    <hr />
+                    <h3>Einführung, Verwendungsbeispiele<br /> und technische Highlights</h3>
+                    <img src="images/ol3-logo.png" width="300" class="plain"/>
                     <p>
                         <small>Marc Jansen, terrestris</small><br />
                         <small>Andreas Hocevar, Boundless</small>
@@ -109,7 +78,7 @@
                 </section>
                 
                 
-                <section>
+                <section id="about-authors">
                     <h2>&Uuml;ber uns</h2>
                     <h5>ol3-Kernentwickler</h5>
                     <div class="split-info">
@@ -121,7 +90,7 @@
                             <small>terrestris GmbH &amp; Co. KG</small><br />
                             <a class="email" href="mailto:jansen@terrestris.de">jansen@terrestris.de</a><br />
                             <a class="github" href="https://github.com/marcjansen/">@marcjansen</a><br />
-                            <a class="twitter" href="https://twitter.com/selectoid/">@ahoce</a><br />
+                            <a class="twitter" href="https://twitter.com/selectoid/">@selectoid</a><br />
                         </div>
                     </div>
                     <div class="split-info">
@@ -136,6 +105,169 @@
                             <a class="twitter" href="https://twitter.com/ahoce/">@ahoce</a><br />
                         </div>
                     </div>
+                </section>
+                
+                <section id="about-company-terrestris">
+                    <!-- <h2>&Uuml;ber <span class="force-lowercase">terrestris</span></h2> -->
+                    <h2>&Uuml;ber terrestris</h2>
+                    <div class="split-info">
+                        <div class="part">
+                            <img src="images/terrestris-logo.png" class="plain contrast" width="192"/>
+                            <br /><br />
+                            <a class="github" href="https://github.com/terrestris/">@terrestris</a><br />
+                            <a class="twitter" href="https://twitter.com/terrestrisde/">@terrestrisde</a>
+                        </div>
+                        <div class="part">
+                            <div class="enumeration">
+	                            <ul>
+	                                <li><a href="http://terrestris.de/">terrestris.de</a></li>
+	                                <li>OpenSource GIS aus Bonn</li>
+	                                <li>Entwicklung, Projekte &amp; Support/Schulung</li>
+	                                <li>Beratung, Planung, Implementierung & Wartung</li>
+	                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                 </section>
+                 
+                 <section id="about-company-boundless">
+                    <h2>&Uuml;ber Boundless</h2>
+                    <div class="split-info">
+                        <div class="part">
+                            <img src="images/boundless-logo.png" class="plain contrast" width="192" />
+                            <br /><br />
+                            <a class="github" href="https://github.com/boundlessgeo/">@boundlessgeo</a><br />
+                            <a class="twitter" href="https://twitter.com/boundlessgeo/">@boundlessgeo</a>
+                        </div>
+                        <div class="part">
+                            <div class="enumeration">
+	                            <ul>
+	                                <li><a href="http://boundlessgeo.com/">boundlessgeo.com</a></li>
+	                                <li>TODO AH</li>
+	                                <li>TODO AH</li>
+	                                <li>TODO AH</li>
+	                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="about-talk">
+                    <h2>&Uuml;ber diesen Vortrag</h2>
+                    <ul>
+                        <li>Highlights</li>
+                        <li>Beispiele</li>
+                        <li>Live-Demos</li>
+                        <li>Code-Snippets</li>
+                        <li>v3.0.0.<strong class="caution">beta2</strong></li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>OpenLayers</h2>
+                    <ul>
+                        <li>
+                            Sehr verbreitete JavaScript-Bibliothek für
+                            dynamische &amp; webbasierte Kartenanwendungen
+                            <br />
+                        </li>
+                        <li>
+                            v. 2.0 &rArr; 7,5 Jahre alt
+                        </li>
+                    </ul>
+                    <img src="images/v2.0.0.png" />
+                </section>
+
+                <section>
+                    <h2>OpenLayers</h2>
+                    <ul>
+                        <li>
+                            12 Punkt-Releases
+                        </li>
+                        <li>
+                            &gt; 6.000 Commits, ~100 Beitragende
+                        </li>
+                        <li>Zahlreiche Features: <ul>
+	                            <li>Layertypen,</li>
+	                            <li>Controls,</li>
+	                            <li>Formate,</li>
+	                            <li>Mobile &hellip;</li>
+                            </ul>
+                        </li>
+                        <div id="books">
+	                        <div>
+	                            <img src="images/packt-ol-cookbook.png" class="plain" style="margin-top:30px">
+	                        </div>
+	                        <div>
+                                <img src="images/openlayers_de_1ed.png" class="plain">
+                            </div>
+                            <div>
+                                <img src="images/packt-ol.jpg" class="plain" style="margin-top:30px">
+                            </div>
+                        </div>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Aber...</h2>
+                    <ul>
+                        <li>~7 Jahre alte Architektur</li>
+                        <li>Modernste Web-Technologien</li>
+                        <li>Moderne Browser</li>
+                    </ul>
+                    <div id="ie-evolution">
+                        <div>
+                            <img src="images/ie6.png" class="plain">
+                        </div>
+                        <div>
+                            <img src="images/ie11.png" class="plain">
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>ol3</h2>
+                    <ul>
+                        <li>Bisschen meta, Sprints, finanzierung</li>
+                        <li>homepage</li>
+                        <li>mailingliste</li>
+                        <li>repo</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Was ist neu?</h2>
+                    <ul>
+                        <li>mehrere slides wie paper</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Was bleibt gleich?</h2>
+                    <ul>
+                        <li>1 oder 2 slides zu zielen</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Beispiel A</h2>
+                    <ul>
+                        <li>Bild als link zu online Beispiel</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Beispiel A Hurz</h2>
+                    <ul>
+                        <li>Was man im Beispiel beachten sollte (v.a. für späteres nachvollziehen)</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Technische Highlights</h2>
+                    <ul>
+                        <li>TODO AH</li>
+                    </ul>
                 </section>
                 
                 <!-- page template

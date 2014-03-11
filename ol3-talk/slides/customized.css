@@ -1,0 +1,78 @@
+.reveal section img.plain {
+    background: none;
+    border-width: 0;
+    box-shadow: none;
+}
+
+.reveal section img.contrast {
+    background-color: #fff;
+    border: 10px solid #fff;
+    box-shadow: 0 0 10px 10px #fff;
+    border-radius: 5px;
+}
+
+.reveal section h2 {
+    border-bottom: 1px inset #eee;
+    margin-bottom: 0.5em;
+}
+
+.reveal section p.subtle {
+    margin-top: 5em;
+}
+
+.reveal section p.subtle a {
+    font-size: smaller;
+}
+
+.reveal section div.split-info {
+    margin: 5px;
+    clear: both;
+}
+
+.reveal section div.part {
+    margin: 5px;
+    float: left;
+    width: 48%;
+}
+
+.reveal section div.part .enumeration {
+    text-align: left;
+}
+
+.reveal section a.twitter,.reveal section a.github {
+	display: inline;
+    padding-left: 1.2em;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    /* background-size: contain; */
+    background-size: 1.0em;
+}
+
+.reveal section a.github {
+    background-image: url("images/github-logo.png");
+}
+
+.reveal section a.twitter {
+    background-image: url("images/twitter-logo.png");
+}
+
+.reveal section strong.caution {
+	text-shadow: 0 0 20px orange
+}
+
+.reveal section .force-lowercase {
+	text-transform:lowercase;
+}
+
+.reveal section #books div {
+	float: left;
+	width: 33%
+}
+
+.reveal section #ie-evolution {
+	text-align: center;
+}
+.reveal section #ie-evolution div {
+    float: left;
+    width: 50%
+}
