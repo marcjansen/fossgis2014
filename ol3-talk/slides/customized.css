@@ -12,7 +12,7 @@
 }
 
 .reveal section h2 {
-    border-bottom: 1px inset #eee;
+    border-bottom: 1px inset #333;
     margin-bottom: 0.5em;
 }
 
@@ -49,15 +49,19 @@
 }
 
 .reveal section a.github {
-    background-image: url("images/github-logo.png");
+    background-image: url("images/github-logo-outline.png");
 }
 
 .reveal section a.twitter {
-    background-image: url("images/twitter-logo.png");
+    background-image: url("images/twitter-logo-outline.png");
 }
 
-.reveal section strong.caution {
+.reveal section .highlight {
 	text-shadow: 0 0 20px orange
+}
+
+.reveal section .unhighlight {
+    opacity: 0.7;
 }
 
 .reveal section .force-lowercase {
@@ -70,6 +74,7 @@
 }
 
 .reveal section #ie-evolution {
+	margin-top: 30px;
 	text-align: center;
 }
 .reveal section #ie-evolution div {
