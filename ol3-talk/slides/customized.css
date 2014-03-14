@@ -68,6 +68,11 @@
 	text-transform:lowercase;
 }
 
+.reveal code.small {
+  font-size: 0.8em;
+  line-height: 1.2em;
+}
+
 .reveal section #books div {
 	float: left;
 	width: 33%
