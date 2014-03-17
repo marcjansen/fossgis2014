@@ -15,22 +15,22 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <link rel="stylesheet" href="./reveal.js-2.6.1/css/reveal.min.css">
-        <link rel="stylesheet" href="./reveal.js-2.6.1/css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="../../slide-resources/reveal.js-2.6.1/css/reveal.min.css">
+        <link rel="stylesheet" href="../../slide-resources/reveal.js-2.6.1/css/theme/default.css" id="theme">
 
         <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="./reveal.js-2.6.1/lib/css/zenburn.css">
+        <link rel="stylesheet" href="../../slide-resources/reveal.js-2.6.1/lib/css/zenburn.css">
 
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
         <script>
-            document.write( '<link rel="stylesheet" href="./reveal.js-2.6.1/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+            document.write( '<link rel="stylesheet" href="../../slide-resources/reveal.js-2.6.1/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
         </script>
 
         <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
 
-        <link rel="stylesheet" type="text/css" href="customized.css" />
+        <link rel="stylesheet" type="text/css" href="../../slide-resources/customized.css" />
     </head>
 
     <body>
@@ -42,8 +42,8 @@
                 <section id="welcome">
                     <h1>OpenLayers 3</h1>
                     <hr />
-                    <h3>Einführung, Verwendungsbeispiele<br /> und technische Highlights</h3>
-                    <img src="images/ol3-logo.png" width="300" class="plain"/>
+                    <h3>Einführung, Verwendungsbeispiele und technische Highlights</h3>
+                    <img src="../../slide-resources/images/ol3-logo.png" width="300" class="plain"/>
                     <p>
                         <small>Marc Jansen, terrestris</small><br />
                         <small>Andreas Hocevar, Boundless</small>
@@ -54,7 +54,7 @@
                     <h1 class="force-lowercase">ol3</h1>
                     <hr />
                     <h3>Was? Wie?<br />&amp; Warum?</h3>
-                    <img src="images/ol3-logo.png" width="300" class="plain"/>
+                    <img src="../../slide-resources/images/ol3-logo.png" width="300" class="plain"/>
                     <p>
                         <small>Marc Jansen, terrestris</small><br />
                         <small>Andreas Hocevar, Boundless</small>
@@ -83,7 +83,7 @@
                     <h5>ol3-Kernentwickler</h5>
                     <div class="split-info">
                         <div class="part">
-                            <img src="images/mj.jpg" height="192"/>
+                            <img src="../../slide-resources/images/mj.jpg" height="192"/>
                         </div>
                         <div class="part">
                             <strong>Marc Jansen</strong><br />
@@ -95,7 +95,7 @@
                     </div>
                     <div class="split-info">
                         <div class="part">
-                            <img src="images/ah.jpg" height="192" />
+                            <img src="../../slide-resources/images/ah.jpg" height="192" />
                         </div>
                         <div class="part">
                             <strong>Andreas Hocevar</strong><br />
@@ -112,7 +112,7 @@
                     <h2>&Uuml;ber terrestris</h2>
                     <div class="split-info">
                         <div class="part">
-                            <img src="images/terrestris-logo.png" class="plain contrast" width="192"/>
+                            <img src="../../slide-resources/images/terrestris-logo.png" class="plain contrast" width="192"/>
                             <br /><br />
                             <a class="github" href="https://github.com/terrestris/">@terrestris</a><br />
                             <a class="twitter" href="https://twitter.com/terrestrisde/">@terrestrisde</a>
@@ -134,19 +134,18 @@
                     <h2>&Uuml;ber Boundless</h2>
                     <div class="split-info">
                         <div class="part">
-                            <img src="images/boundless-logo.png" class="plain contrast" width="192" />
+                            <img src="../../slide-resources/images/boundless-logo.png" class="plain contrast" width="192" />
                             <br /><br />
                             <a class="github" href="https://github.com/boundlessgeo/">@boundlessgeo</a><br />
                             <a class="twitter" href="https://twitter.com/boundlessgeo/">@boundlessgeo</a>
                         </div>
                         <div class="part">
                             <div class="enumeration">
-                                <ul>
-                                    <li><a href="http://boundlessgeo.com/">boundlessgeo.com</a></li>
-                                    <li>TODO AH</li>
-                                    <li>TODO AH</li>
-                                    <li>TODO AH</li>
-                                </ul>
+                              <ul>
+                                <li><a href="http://boundlessgeo.com/">boundlessgeo.com</a></li>
+                                <li>Boundless reduziert die Kosten freier Software</li>
+                                <li>Governance in der FOSSGIS Community</li>
+                              </ul>
                             </div>
                         </div>
                     </div>
@@ -179,7 +178,7 @@
                             v. 2.0 &rArr; <strong class="highlight">7,5 Jahre alt</strong>
                         </li>
                     </ul>
-                    <img src="images/v2.0.0.png" />
+                    <img src="../../slide-resources/images/v2.0.0.png" />
                 </section>
 
                 <section>
@@ -200,13 +199,13 @@
                         </li>
                         <div id="books">
                             <div>
-                                <img src="images/packt-ol-cookbook.png" class="plain" style="margin-top:30px">
+                                <img src="../../slide-resources/images/packt-ol-cookbook.png" class="plain" style="margin-top:30px">
                             </div>
                             <div>
-                                <img src="images/openlayers_de_1ed.png" class="plain">
+                                <img src="../../slide-resources/images/openlayers_de_1ed.png" class="plain">
                             </div>
                             <div>
-                                <img src="images/packt-ol.jpg" class="plain" style="margin-top:30px">
+                                <img src="../../slide-resources/images/packt-ol.jpg" class="plain" style="margin-top:30px">
                             </div>
                         </div>
                     </ul>
@@ -221,10 +220,10 @@
                     </ul>
                     <div id="ie-evolution">
                         <div>
-                            <img src="images/ie6.png" class="plain contrast">
+                            <img src="../../slide-resources/images/ie6.png" class="plain contrast">
                         </div>
                         <div>
-                            <img src="images/ie11.png" class="plain contrast">
+                            <img src="../../slide-resources/images/ie11.png" class="plain contrast">
                         </div>
                     </div>
                 </section>
@@ -269,27 +268,29 @@
 
                 <section>
                     <h2>Closure Compiler</h2>
-                    <pre><code class="javascript" data-trim>
-goog.provide('ANamespace.ASubNamespace.AClass');
-ANamespace.ASubNamespace.AClass = function() {
-  this.aProperty = 'prop1';
+                    <pre><code class="small javascript" data-trim>
+ol.format.XMLFeature.prototype.readFeatures = function(source) {
+  if (ol.xml.isDocument(source)) {
+    return this.readFeaturesFromDocument(/** @type {Document} */ (source));
+  } else if (ol.xml.isNode(source)) {
+    return this.readFeaturesFromNode(/** @type {Node} */ (source));
+  } else if (goog.isString(source)) {
+    var doc = ol.xml.load(source);
+    return this.readFeaturesFromDocument(doc);
+  } else {
+    goog.asserts.fail();
+    return [];
+  }
 };
-ANamespace.ASubNamespace.AClass.prototype.aMethod =
-    function() {
-  this.aProperty = 'change';
-};
-var anInstance = new ANamespace.ASubNamespace.AClass();
-anInstance.aMethod();
                     </code></pre>
                     &hellip; kompiliert:
-                    <pre><code class="javascript" data-trim>
-window.b=new function(){this.a="prop1"};window.b.a="change";
-                    </code></pre>
+                    <pre><code class="small javascript" data-trim>
+l.Ga=function(a){return Kn(a)?fo(this,a):Nn(a)?this.$b(a):la(a)?(a=Rn(a),fo(this,a)):[]};                    </code></pre>
                 </section>
 
                 <section>
                     <div>
-                        <img src="images/closure-compiler-by-tmcw.png"
+                        <img src="../../slide-resources/images/closure-compiler-by-tmcw.png"
                           class="plain" alt="Closure is a big buyin, but probably worth it. --tmcw" />
                     </div>
                     Ja und Ja!
@@ -323,7 +324,7 @@ window.b=new function(){this.a="prop1"};window.b.a="change";
                 <section>
                     <h2>Hallo, Welt</h2>
                     <a href="http://ol3js.org/en/master/examples/simple.html" target="_blank">
-                        <img src="images/simple-example.png">
+                        <img src="../../slide-resources/images/simple-example.png">
                         ol3js.org/en/master/examples/simple.html
                     </a>
                 </section>
@@ -394,7 +395,7 @@ window.b=new function(){this.a="prop1"};window.b.a="change";
                 <section>
                     <h2>50.000 Koordinaten</h2>
                     <a href="http://ol3js.org/en/master/examples/simple.html" target="_blank">
-                        <img src="images/igc-example.png">
+                        <img src="../../slide-resources/images/igc-example.png">
                         ol3js.org/en/master/examples/igc.html
                     </a>
                 </section>
@@ -423,7 +424,7 @@ window.b=new function(){this.a="prop1"};window.b.a="change";
                 <section>
                     <h2>Drag & Drop / Formate</h2>
                     <a href="http://ol3js.org/en/master/examples/simple.html" target="_blank">
-                        <img src="images/drag-drop.png">
+                        <img src="../../slide-resources/images/drag-drop.png">
                         ol3js.org/en/master/examples/drag-and-drop.html
                     </a>
                 </section>
@@ -474,23 +475,61 @@ dragAndDropInteraction.on('addfeatures', function(event) {
                 <section>
                     <h2>Performance Replay-API</h2>
                     <a href="http://ol3js.org/en/master/examples/fractal.html" target="_blank">
-                        <img src="images/fractal.png">
+                        <img src="../../slide-resources/images/fractal.png">
                         http://ol3js.org/en/master/examples/fractal.html
                     </a>
                 </section>
 
                 <section>
-                    <h1><strong class="highlight">786.433</strong> Punkte!</h1>
+                    <h1><strong class="highlight">786.433</strong><br>Punkte!</h1>
                 </section>
                 
                 <section>
                     <h2>Performance R-Tree</h2>
-                    TODO AH
+                    <a href="https://github.com/imbcmdth/RTree" target="_blank">
+                        <img src="../../slide-resources/images/rtree.png">
+                        https://github.com/imbcmdth/RTree
+                    </a>
                 </section>
 
                 <section>
-                    <h2>pre- &amp; postcompose Canvas</h2>
-                    TODO AH
+                    <h2>Performance R-Tree</h2>
+                    <a href="https://github.com/mourner/rbush" target="_blank">
+                        <img src="../../slide-resources/images/rbush.png">
+                        https://github.com/mourner/rbush
+                    </a>
+                </section>
+                <section>
+                    <h2>pre-/postcompose API</h2>
+                    <a href="http://ol3js.org/en/master/examples/layer-spy.html" target="_blank">
+                        <img src="../../slide-resources/images/layer-spy.png">
+                        http://ol3js.org/en/master/examples/layer-spy.html
+                    </a>
+                </section>
+
+                <section>
+                    <h2>pre-/postcompose API</h2>
+                    <pre><code class="javascript" contenteditable>// Clipping vor dem Rendern
+imagery.on('precompose', function(event) {
+  var ctx = event.context;
+  ctx.save();
+  ctx.beginPath();
+  if (mousePosition) {
+    // nur den Umkreis des Mauscursors zeigen
+    ctx.arc(mousePosition[0], mousePosition[1], radius, 0, 2 * Math.PI);
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = 'rgba(0,0,0,0.5)';
+    ctx.stroke();
+  }
+  ctx.clip();
+});
+
+// Aufräumen nach dem Rendern
+imagery.on('postcompose', function(event) {
+  var ctx = event.context;
+  ctx.restore();
+});
+                    </code></pre>
                 </section>
                 
                 <section>
@@ -500,8 +539,9 @@ dragAndDropInteraction.on('addfeatures', function(event) {
                 <section>
                     <h2><span lang="en">Ready for production?</span></h2>
                     <ul>
-                        <li>Klares <strong class="highlight">Jein</strong></li>
-                        <li>Beta: API kann und wird sich ändern</li>
+                        <li>Beta - API kann und wird sich ändern</li>
+                        <li>Hohe Code-Qualität bereits jetzt</li>
+                        <li>Dokumentation noch im Aufbau</li>
                         <li>Zusammenspiel mit Bibliotheken</li>
                     </ul>
                 </section>
@@ -509,7 +549,7 @@ dragAndDropInteraction.on('addfeatures', function(event) {
                 <section>
                     <h2><span lang="en">Ready for production?</span></h2>
                     <a href="http://map.geo.admin.ch/">
-                        <img src="images/swisstopo.png" />
+                        <img src="../../slide-resources/images/swisstopo.png" />
                         map.geo.admin.ch
                     </a>,
                     <a href="https://github.com/geoadmin/mf-geoadmin3" class="github">Code</a>
@@ -530,7 +570,7 @@ dragAndDropInteraction.on('addfeatures', function(event) {
                 
                 <section>
                     <h2>&hellip;Integration von Cesium&hellip;</h2>
-                    <img src="images/cesium-ol3.png" />
+                    <img src="../../slide-resources/images/cesium-ol3.png" />
                 </section>
 
                 <section>
@@ -587,8 +627,8 @@ dragAndDropInteraction.on('addfeatures', function(event) {
 
         </div>
 
-        <script src="./reveal.js-2.6.1/lib/js/head.min.js"></script>
-        <script src="./reveal.js-2.6.1/js/reveal.min.js"></script>
+        <script src="../../slide-resources/reveal.js-2.6.1/lib/js/head.min.js"></script>
+        <script src="../../slide-resources/reveal.js-2.6.1/js/reveal.min.js"></script>
 
         <script>
 
@@ -609,12 +649,12 @@ dragAndDropInteraction.on('addfeatures', function(event) {
 
                 // Optional libraries used to extend on reveal.js
                 dependencies: [
-                    { src: 'reveal.js-2.6.1/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                    { src: 'reveal.js-2.6.1/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'reveal.js-2.6.1/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'reveal.js-2.6.1/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: 'reveal.js-2.6.1/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: 'reveal.js-2.6.1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../slide-resources/reveal.js-2.6.1/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../../slide-resources/reveal.js-2.6.1/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../../slide-resources/reveal.js-2.6.1/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../../slide-resources/reveal.js-2.6.1/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../../slide-resources/reveal.js-2.6.1/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../../slide-resources/reveal.js-2.6.1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
                 ]
             });
 
