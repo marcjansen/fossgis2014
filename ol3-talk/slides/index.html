@@ -15,22 +15,22 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <link rel="stylesheet" href="./reveal.js-2.6.1/css/reveal.min.css">
-        <link rel="stylesheet" href="./reveal.js-2.6.1/css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="../../slide-resources/reveal.js-2.6.1/css/reveal.min.css">
+        <link rel="stylesheet" href="../../slide-resources/reveal.js-2.6.1/css/theme/default.css" id="theme">
 
         <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="./reveal.js-2.6.1/lib/css/zenburn.css">
+        <link rel="stylesheet" href="../../slide-resources/reveal.js-2.6.1/lib/css/zenburn.css">
 
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
         <script>
-            document.write( '<link rel="stylesheet" href="./reveal.js-2.6.1/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+            document.write( '<link rel="stylesheet" href="../../slide-resources/reveal.js-2.6.1/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
         </script>
 
         <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
 
-        <link rel="stylesheet" type="text/css" href="customized.css" />
+        <link rel="stylesheet" type="text/css" href="../../slide-resources/customized.css" />
     </head>
 
     <body>
@@ -43,7 +43,7 @@
                     <h1>OpenLayers 3</h1>
                     <hr />
                     <h3>Einführung, Verwendungsbeispiele und technische Highlights</h3>
-                    <img src="images/ol3-logo.png" width="300" class="plain"/>
+                    <img src="../../slide-resources/images/ol3-logo.png" width="300" class="plain"/>
                     <p>
                         <small>Marc Jansen, terrestris</small><br />
                         <small>Andreas Hocevar, Boundless</small>
@@ -54,7 +54,7 @@
                     <h1 class="force-lowercase">ol3</h1>
                     <hr />
                     <h3>Was? Wie?<br />&amp; Warum?</h3>
-                    <img src="images/ol3-logo.png" width="300" class="plain"/>
+                    <img src="../../slide-resources/images/ol3-logo.png" width="300" class="plain"/>
                     <p>
                         <small>Marc Jansen, terrestris</small><br />
                         <small>Andreas Hocevar, Boundless</small>
@@ -83,7 +83,7 @@
                     <h5>ol3-Kernentwickler</h5>
                     <div class="split-info">
                         <div class="part">
-                            <img src="images/mj.jpg" height="192"/>
+                            <img src="../../slide-resources/images/mj.jpg" height="192"/>
                         </div>
                         <div class="part">
                             <strong>Marc Jansen</strong><br />
@@ -95,7 +95,7 @@
                     </div>
                     <div class="split-info">
                         <div class="part">
-                            <img src="images/ah.jpg" height="192" />
+                            <img src="../../slide-resources/images/ah.jpg" height="192" />
                         </div>
                         <div class="part">
                             <strong>Andreas Hocevar</strong><br />
@@ -112,7 +112,7 @@
                     <h2>&Uuml;ber terrestris</h2>
                     <div class="split-info">
                         <div class="part">
-                            <img src="images/terrestris-logo.png" class="plain contrast" width="192"/>
+                            <img src="../../slide-resources/images/terrestris-logo.png" class="plain contrast" width="192"/>
                             <br /><br />
                             <a class="github" href="https://github.com/terrestris/">@terrestris</a><br />
                             <a class="twitter" href="https://twitter.com/terrestrisde/">@terrestrisde</a>
@@ -134,7 +134,7 @@
                     <h2>&Uuml;ber Boundless</h2>
                     <div class="split-info">
                         <div class="part">
-                            <img src="images/boundless-logo.png" class="plain contrast" width="192" />
+                            <img src="../../slide-resources/images/boundless-logo.png" class="plain contrast" width="192" />
                             <br /><br />
                             <a class="github" href="https://github.com/boundlessgeo/">@boundlessgeo</a><br />
                             <a class="twitter" href="https://twitter.com/boundlessgeo/">@boundlessgeo</a>
@@ -178,7 +178,7 @@
                             v. 2.0 &rArr; <strong class="highlight">7,5 Jahre alt</strong>
                         </li>
                     </ul>
-                    <img src="images/v2.0.0.png" />
+                    <img src="../../slide-resources/images/v2.0.0.png" />
                 </section>
 
                 <section>
@@ -199,13 +199,13 @@
                         </li>
                         <div id="books">
                             <div>
-                                <img src="images/packt-ol-cookbook.png" class="plain" style="margin-top:30px">
+                                <img src="../../slide-resources/images/packt-ol-cookbook.png" class="plain" style="margin-top:30px">
                             </div>
                             <div>
-                                <img src="images/openlayers_de_1ed.png" class="plain">
+                                <img src="../../slide-resources/images/openlayers_de_1ed.png" class="plain">
                             </div>
                             <div>
-                                <img src="images/packt-ol.jpg" class="plain" style="margin-top:30px">
+                                <img src="../../slide-resources/images/packt-ol.jpg" class="plain" style="margin-top:30px">
                             </div>
                         </div>
                     </ul>
@@ -220,10 +220,10 @@
                     </ul>
                     <div id="ie-evolution">
                         <div>
-                            <img src="images/ie6.png" class="plain contrast">
+                            <img src="../../slide-resources/images/ie6.png" class="plain contrast">
                         </div>
                         <div>
-                            <img src="images/ie11.png" class="plain contrast">
+                            <img src="../../slide-resources/images/ie11.png" class="plain contrast">
                         </div>
                     </div>
                 </section>
@@ -290,7 +290,7 @@ l.Ga=function(a){return Kn(a)?fo(this,a):Nn(a)?this.$b(a):la(a)?(a=Rn(a),fo(this
 
                 <section>
                     <div>
-                        <img src="images/closure-compiler-by-tmcw.png"
+                        <img src="../../slide-resources/images/closure-compiler-by-tmcw.png"
                           class="plain" alt="Closure is a big buyin, but probably worth it. --tmcw" />
                     </div>
                     Ja und Ja!
@@ -324,7 +324,7 @@ l.Ga=function(a){return Kn(a)?fo(this,a):Nn(a)?this.$b(a):la(a)?(a=Rn(a),fo(this
                 <section>
                     <h2>Hallo, Welt</h2>
                     <a href="http://ol3js.org/en/master/examples/simple.html" target="_blank">
-                        <img src="images/simple-example.png">
+                        <img src="../../slide-resources/images/simple-example.png">
                         ol3js.org/en/master/examples/simple.html
                     </a>
                 </section>
@@ -395,7 +395,7 @@ l.Ga=function(a){return Kn(a)?fo(this,a):Nn(a)?this.$b(a):la(a)?(a=Rn(a),fo(this
                 <section>
                     <h2>50.000 Koordinaten</h2>
                     <a href="http://ol3js.org/en/master/examples/simple.html" target="_blank">
-                        <img src="images/igc-example.png">
+                        <img src="../../slide-resources/images/igc-example.png">
                         ol3js.org/en/master/examples/igc.html
                     </a>
                 </section>
@@ -424,7 +424,7 @@ l.Ga=function(a){return Kn(a)?fo(this,a):Nn(a)?this.$b(a):la(a)?(a=Rn(a),fo(this
                 <section>
                     <h2>Drag & Drop / Formate</h2>
                     <a href="http://ol3js.org/en/master/examples/simple.html" target="_blank">
-                        <img src="images/drag-drop.png">
+                        <img src="../../slide-resources/images/drag-drop.png">
                         ol3js.org/en/master/examples/drag-and-drop.html
                     </a>
                 </section>
@@ -475,7 +475,7 @@ dragAndDropInteraction.on('addfeatures', function(event) {
                 <section>
                     <h2>Performance Replay-API</h2>
                     <a href="http://ol3js.org/en/master/examples/fractal.html" target="_blank">
-                        <img src="images/fractal.png">
+                        <img src="../../slide-resources/images/fractal.png">
                         http://ol3js.org/en/master/examples/fractal.html
                     </a>
                 </section>
@@ -487,7 +487,7 @@ dragAndDropInteraction.on('addfeatures', function(event) {
                 <section>
                     <h2>Performance R-Tree</h2>
                     <a href="https://github.com/imbcmdth/RTree" target="_blank">
-                        <img src="images/rtree.png">
+                        <img src="../../slide-resources/images/rtree.png">
                         https://github.com/imbcmdth/RTree
                     </a>
                 </section>
@@ -495,14 +495,14 @@ dragAndDropInteraction.on('addfeatures', function(event) {
                 <section>
                     <h2>Performance R-Tree</h2>
                     <a href="https://github.com/mourner/rbush" target="_blank">
-                        <img src="images/rbush.png">
+                        <img src="../../slide-resources/images/rbush.png">
                         https://github.com/mourner/rbush
                     </a>
                 </section>
                 <section>
                     <h2>pre-/postcompose API</h2>
                     <a href="http://ol3js.org/en/master/examples/layer-spy.html" target="_blank">
-                        <img src="images/layer-spy.png">
+                        <img src="../../slide-resources/images/layer-spy.png">
                         http://ol3js.org/en/master/examples/layer-spy.html
                     </a>
                 </section>
@@ -549,7 +549,7 @@ imagery.on('postcompose', function(event) {
                 <section>
                     <h2><span lang="en">Ready for production?</span></h2>
                     <a href="http://map.geo.admin.ch/">
-                        <img src="images/swisstopo.png" />
+                        <img src="../../slide-resources/images/swisstopo.png" />
                         map.geo.admin.ch
                     </a>,
                     <a href="https://github.com/geoadmin/mf-geoadmin3" class="github">Code</a>
@@ -570,7 +570,7 @@ imagery.on('postcompose', function(event) {
                 
                 <section>
                     <h2>&hellip;Integration von Cesium&hellip;</h2>
-                    <img src="images/cesium-ol3.png" />
+                    <img src="../../slide-resources/images/cesium-ol3.png" />
                 </section>
 
                 <section>
@@ -627,8 +627,8 @@ imagery.on('postcompose', function(event) {
 
         </div>
 
-        <script src="./reveal.js-2.6.1/lib/js/head.min.js"></script>
-        <script src="./reveal.js-2.6.1/js/reveal.min.js"></script>
+        <script src="../../slide-resources/reveal.js-2.6.1/lib/js/head.min.js"></script>
+        <script src="../../slide-resources/reveal.js-2.6.1/js/reveal.min.js"></script>
 
         <script>
 
@@ -649,12 +649,12 @@ imagery.on('postcompose', function(event) {
 
                 // Optional libraries used to extend on reveal.js
                 dependencies: [
-                    { src: 'reveal.js-2.6.1/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                    { src: 'reveal.js-2.6.1/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'reveal.js-2.6.1/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'reveal.js-2.6.1/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: 'reveal.js-2.6.1/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: 'reveal.js-2.6.1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../../slide-resources/reveal.js-2.6.1/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../../slide-resources/reveal.js-2.6.1/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../../slide-resources/reveal.js-2.6.1/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../../slide-resources/reveal.js-2.6.1/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../../slide-resources/reveal.js-2.6.1/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../../slide-resources/reveal.js-2.6.1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
                 ]
             });
 
