@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Mitmachen! &mdash; Lightning Talk</title>
+
+        <meta name="description" content="Lightning Talk zum Thema 'Mitmachen!' auf der FOSSGIS 2014">
+        <meta name="author" content="Marc Jansen, terrestris">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="../slide-resources/reveal.js-2.6.1/css/reveal.min.css">
+        <link rel="stylesheet" href="../slide-resources/reveal.js-2.6.1/css/theme/default.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="../slide-resources/reveal.js-2.6.1/lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="../slide-resources/reveal.js-2.6.1/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="../slide-resources/customized.css" />
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+            
+                <section id="title">
+                    <h1>Mitmachen!</h1>
+                    <br /><br />
+                    <p>Marc Jansen, jansen@terrestris.de</p>
+                </section>
+
+                <section id="imprint">
+                    <h3>Impressum</h3>
+                    <ul>
+                        <li>Autor:
+                            <ul>
+                                <li>Marc Jansen, terrestris GmbH &amp; Co. KG, <a href="mailto:jansen@terrestris.de">jansen@terrestris.de</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            Lizenz: <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+                        </li>
+                        <li>
+                            <a href="http://marcjansen.github.io/fossgis2014/lightning-talk/">Vortragsfolien</a>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="../slide-resources/reveal.js-2.6.1/lib/js/head.min.js"></script>
+        <script src="../slide-resources/reveal.js-2.6.1/js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: 'sky', // available themes are in /css/theme
+                transition: 'zoom', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: '../slide-resources/reveal.js-2.6.1/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../slide-resources/reveal.js-2.6.1/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../slide-resources/reveal.js-2.6.1/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../slide-resources/reveal.js-2.6.1/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../slide-resources/reveal.js-2.6.1/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../slide-resources/reveal.js-2.6.1/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
